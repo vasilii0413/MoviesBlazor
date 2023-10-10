@@ -1,0 +1,23 @@
+﻿@page "/actor/create"
+@inject Movies.EntityFramework.MoviesDbContext.MoviesDBContext context;
+@inject NavigationManager Navigate;
+@using Movies.EntityFramework.Models;
+<h3>Add Actor</h3>
+<Form ButtonText="Add Actor" act="@actor" OnValidSubmit="@CreateActor"/>
+      
+@code {
+        ActorModel actor = new ActorModel();
+        async Task CreateActor()
+        {
+            try
+            {
+                context.Actors.Add(actor);
+                await context.SaveChangesAsync();
+                Navigate.NavigateTo("/actors");
+            }
+            catch
+            {
+                throw;
+            }
+        }
+}

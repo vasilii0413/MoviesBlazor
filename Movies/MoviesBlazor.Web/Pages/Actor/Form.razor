@@ -1,0 +1,37 @@
+﻿@using Movies.EntityFramework.Models;
+<EditForm Model="@act" OnValidSubmit="@OnValidSubmit">
+    <DataAnnotationsValidator />
+    <div class="form-group">
+        <label>Full Name:</label>
+        <div>
+            <InputText @bind-Value="@act.Name" />
+            <ValidationMessage For="@(() => act.Name)" />
+        </div>
+        <div>
+            
+        </div>
+    </div>
+    <div class="form-group ">
+        <div>
+            <label>Date of Birth:</label>
+            <div>
+                <InputDate @bind-Value="@act.DateOfBirth" />
+                <ValidationMessage For="@(() => act.DateOfBirth)" />
+            </div>
+        </div>
+    </div>
+    <br />
+    <button type="submit" class="btn btn-success">
+        @ButtonText
+    </button>
+    <a class="btn btn-link" href="actors/">Back To List</a>
+
+</EditForm>
+
+
+@code {
+    [Parameter] public ActorModel act { get; set; }
+    [Parameter] public string ButtonText { get; set; } = "Save";
+    [Parameter] public EventCallback OnValidSubmit { get; set; }
+    
+}

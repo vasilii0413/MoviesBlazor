@@ -1,0 +1,101 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = MoviesBlazor.Web
+build_property.RootNamespace = MoviesBlazor.Web
+build_property.ProjectDir = E:\Job\Movies\MoviesBlazor.Web\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = E:\Job\Movies\MoviesBlazor.Web
+build_property._RazorSourceGeneratorDebug = 
+
+[E:/Job/Movies/MoviesBlazor.Web/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Job/Movies/MoviesBlazor.Web/Pages/ActorsMovies/Create.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWN0b3JzTW92aWVzXENyZWF0ZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Job/Movies/MoviesBlazor.Web/Pages/ActorsMovies/FetchData.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWN0b3JzTW92aWVzXEZldGNoRGF0YS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Job/Movies/MoviesBlazor.Web/Pages/ActorsMovies/FormActorMovie.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWN0b3JzTW92aWVzXEZvcm1BY3Rvck1vdmllLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Job/Movies/MoviesBlazor.Web/Pages/Actor/Create.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWN0b3JcQ3JlYXRlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Job/Movies/MoviesBlazor.Web/Pages/Actor/Delete.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWN0b3JcRGVsZXRlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Job/Movies/MoviesBlazor.Web/Pages/Actor/Edit.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWN0b3JcRWRpdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Job/Movies/MoviesBlazor.Web/Pages/Actor/FetchData.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWN0b3JcRmV0Y2hEYXRhLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Job/Movies/MoviesBlazor.Web/Pages/Actor/Form.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWN0b3JcRm9ybS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Job/Movies/MoviesBlazor.Web/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Job/Movies/MoviesBlazor.Web/Pages/Movie/Create.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTW92aWVcQ3JlYXRlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Job/Movies/MoviesBlazor.Web/Pages/Movie/Delete.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTW92aWVcRGVsZXRlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Job/Movies/MoviesBlazor.Web/Pages/Movie/Edit.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTW92aWVcRWRpdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Job/Movies/MoviesBlazor.Web/Pages/Movie/FetchData.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTW92aWVcRmV0Y2hEYXRhLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Job/Movies/MoviesBlazor.Web/Pages/Movie/Form.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTW92aWVcRm9ybS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Job/Movies/MoviesBlazor.Web/Shared/SurveyPrompt.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Job/Movies/MoviesBlazor.Web/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Job/Movies/MoviesBlazor.Web/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-8tqvlpkqp5
+
+[E:/Job/Movies/MoviesBlazor.Web/Shared/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-6ynpa9suhi
+
+[E:/Job/Movies/MoviesBlazor.Web/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Job/Movies/MoviesBlazor.Web/Pages/_Host.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0hvc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 

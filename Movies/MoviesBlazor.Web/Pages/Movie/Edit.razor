@@ -1,0 +1,30 @@
+﻿@page "/movie/edit/{movieIdString}"
+@inject Movies.EntityFramework.MoviesDbContext.MoviesDBContext context;
+@inject NavigationManager Navigate;
+@using Movies.EntityFramework.Models;
+
+<h3>Edit</h3>
+
+<Form ButtonText="Update" mov="@movie"
+      OnValidSubmit="@EditMovie" />
+
+@code {
+    [Parameter] public string movieIdString { get; set; }
+    MovieModel movie = new MovieModel();
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (short.TryParse(movieIdString, out var movieId))
+        {
+            movie = await context.Movies.FindAsync(movieId);
+        }
+
+    }
+
+    async Task EditMovie()
+    {
+        await context.SaveChangesAsync();
+        Navigate.NavigateTo("/movies");
+
+    }
+}

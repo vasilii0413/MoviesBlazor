@@ -1,0 +1,62 @@
+﻿@page "/movies"
+@inject Movies.EntityFramework.MoviesDbContext.MoviesDBContext context
+@using Movies.EntityFramework.Models
+<h3><b>Movies</b></h3>
+<div class="form-group">
+    <a class="btn btn-primary" href="movie/create"><i class="oi oi-plus"></i> Add New</a>
+</div>
+<br />
+
+@if(movies == null)
+{
+    <text>Loading...</text>
+}
+else if(movies.Count == 0)
+{
+    <text>No Records Found.</text>
+}
+else
+{
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                @* <th>MovieId</th> *@
+                <th>Name</th>
+                <th>Genre</th>
+                <th>AgeRestriction</th>
+                <th>Year</th>
+                <th>Description</th>
+                <th>Length(min)</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+    @foreach(MovieModel mov in movies)
+    {
+        <tr>
+            @* <td>@mov.MovieId</td> *@
+            <td>@mov.Name</td>
+            <td>@mov.Genre</td>
+            <td>@mov.AgeRestriction</td>
+            <td>@mov.Year</td>
+            <td>@mov.Description</td>
+            <td>@mov.Length</td>
+            
+            <td>
+                <a class="btn btn-success" href="movie/edit/@mov.MovieId">Edit</a>
+                <a class="btn btn-danger" href="movie/delete/@mov.MovieId">Delete</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+    </table>
+}
+
+@code {
+    List<MovieModel> movies = new List<MovieModel>();
+    protected override void OnInitialized()
+    {
+        movies = context.Movies.ToList();
+    }
+
+}

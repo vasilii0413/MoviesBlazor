@@ -1,0 +1,55 @@
+﻿@inject Movies.EntityFramework.MoviesDbContext.MoviesDBContext context;
+@using Movies.EntityFramework.Models;
+@using Microsoft.EntityFrameworkCore;
+<EditForm Model="@acM" OnValidSubmit="@OnValidSubmit">
+    <DataAnnotationsValidator />
+    <div class="form-group ">
+        <div>
+            <label>Movie:</label>
+            <div>
+                <InputSelect @bind-Value="@acM.MovieId">
+                    @foreach (var movie in movies) 
+                    {
+                        <option value="@movie.MovieId">@movie.Name</option>
+                    }
+                </InputSelect>
+                <ValidationMessage For="@(() => acM.MovieId)" />
+            </div>
+        </div>
+    </div>    <br />
+    <div class="form-group">
+        <label>Actor:</label>
+        <div>
+            <InputSelect @bind-Value="@acM.ActorId">
+                @foreach (var actor in actors)
+                {
+                    <option value="@actor.ActorId">@actor.Name</option>
+                }
+            </InputSelect>
+            <ValidationMessage For="@(() => acM.ActorId)" />
+        </div>
+        <div>
+        </div>
+    </div>    <br />
+    <button type="submit" class="btn btn-success">
+        @ButtonText
+    </button>
+    <a class="btn btn-link" href="actorsmovies/">Back To List</a>
+
+</EditForm>
+
+
+@code {
+    [Parameter] public ActorMovieModel acM { get; set; }
+    [Parameter] public string ButtonText { get; set; } = "Save";
+    [Parameter] public EventCallback OnValidSubmit { get; set; }
+
+    private List<ActorModel> actors = new List<ActorModel>();
+    private List<MovieModel> movies = new List<MovieModel>();
+
+    protected override void OnInitialized()
+    {
+        actors = context.Actors.ToList();
+        movies = context.Movies.ToList();
+    }
+}

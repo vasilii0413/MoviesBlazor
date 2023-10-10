@@ -1,0 +1,28 @@
+﻿@page "/movie/delete/{movieIdString}"
+@inject Movies.EntityFramework.MoviesDbContext.MoviesDBContext context;
+@inject NavigationManager Navigate;
+@using Movies.EntityFramework.Models;
+
+<Form ButtonText="Delete" mov="@movie" OnValidSubmit="@DeleteMovie" />
+
+@code {
+    [Parameter] public string movieIdString { get; set; }
+     MovieModel movie = new MovieModel();
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (short.TryParse(movieIdString, out var movieId))
+        {
+            movie = await context.Movies.FindAsync(movieId);
+        }
+
+    }
+
+    async Task DeleteMovie()
+    {
+        context.Remove(movie);
+        await context.SaveChangesAsync();
+        Navigate.NavigateTo("/movies");
+
+    }
+}

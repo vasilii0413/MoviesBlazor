@@ -1,0 +1,39 @@
+﻿@page "/"
+@inject Movies.EntityFramework.MoviesDbContext.MoviesDBContext context;
+@using Movies.EntityFramework.Models;
+@using Microsoft.EntityFrameworkCore;
+<PageTitle>Main Page</PageTitle>
+<h1>Popular Movies</h1>
+<div class="positioning">
+    @foreach (var movie in movies)
+    {
+        <div class="card">
+            <img src="@movie.ImageUrl" />
+            <div class="descriptions">
+                <h1>@movie.Name (@movie.Year)</h1>
+                <span>@movie.Description<br><br>
+                    @movie.Genre<br>
+                </span>
+                <div>
+                    @foreach (var actorMovies in actorMovies.Where(am => am.MovieId == movie.MovieId))
+                    {
+                        <span><i>@actorMovies.Actor.Name,</i></span>
+                    }
+                </div>
+            </div>
+        </div>
+        <div class="accordion-body">            
+            </div>
+    }
+</div>
+
+@code {
+    List<MovieModel> movies = new List<MovieModel>();
+    List<ActorMovieModel> actorMovies = new List<ActorMovieModel>();
+
+    protected override void OnInitialized()
+    {
+        movies = context.Movies.ToList();
+        actorMovies = context.ActorsMovies.Include(a => a.Actor).ToList();
+    }
+}

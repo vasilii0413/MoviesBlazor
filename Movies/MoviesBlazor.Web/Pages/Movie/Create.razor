@@ -1,0 +1,23 @@
+﻿@page "/movie/create"
+@inject Movies.EntityFramework.MoviesDbContext.MoviesDBContext context;
+@inject NavigationManager Navigate;
+@using Movies.EntityFramework.Models;
+<h3>Add Movie</h3>
+<Form ButtonText="Add Movie" mov="@movie" OnValidSubmit="@CreateMovie"/>
+
+@code {
+    MovieModel movie = new MovieModel();
+    async Task CreateMovie()
+    {
+        try
+        {
+            context.Movies.Add(movie);
+            await context.SaveChangesAsync();
+            Navigate.NavigateTo("/movies");
+        }
+        catch
+        {
+            throw;
+        }
+    }
+}

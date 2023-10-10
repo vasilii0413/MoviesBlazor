@@ -1,0 +1,80 @@
+﻿@using Movies.EntityFramework.Models;
+<EditForm Model="@mov" OnValidSubmit="@OnValidSubmit">
+      <DataAnnotationsValidator /> 
+    <div class="form-group">
+        <label>Name:</label>
+        <div>
+            <InputText @bind-Value="@mov.Name" />
+            <ValidationMessage For="@(() => mov.Name)" />
+        </div>
+        <div>
+        </div>
+    </div>    <br />
+    <div class="form-group ">
+        <div>
+            <label>Genre:</label>
+            <div>
+                <InputText @bind-Value="@mov.Genre" />
+                <ValidationMessage For="@(() => mov.Genre)" />
+            </div>
+        </div>
+    </div>    <br />
+    <div class="form-group ">
+        <div>
+            <label>Age Restriction:</label>
+            <div>
+                <InputNumber @bind-Value="@mov.AgeRestriction" />
+                <ValidationMessage For="@(() => mov.AgeRestriction)" />
+            </div>
+        </div>
+    </div>
+    <br />
+    <div class="form-group ">
+        <div>
+            <label>Year:</label>
+            <div>
+                <InputNumber @bind-Value="@mov.Year" />
+                <ValidationMessage For="@(() => mov.Year)" />
+            </div>
+        </div>
+    </div><br />
+    <div class="form-group ">
+        <div>
+            <label>Description:</label>
+            <div>
+                <InputTextArea @bind-Value="@mov.Description" />
+                <ValidationMessage For="@(() => mov.Description)" />
+            </div>
+        </div>
+    </div><br />
+    <div class="form-group ">
+        <div>
+            <label>Length:</label>
+            <div>
+                <InputNumber @bind-Value="@mov.Length" />
+                <ValidationMessage For="@(() => mov.Length)" />
+            </div>
+        </div>
+    </div>
+    <div class="form-group ">
+        <div>
+            <label>ImageURL:</label>
+            <div>
+                <InputText @bind-Value="@mov.ImageUrl" />
+                <ValidationMessage For="@(() => mov.ImageUrl)" />
+            </div>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-success">
+        @ButtonText
+    </button>
+    <a class="btn btn-link" href="movies/">Back To List</a>
+
+</EditForm>
+
+
+@code {
+    [Parameter] public MovieModel mov { get; set; }
+    [Parameter] public string ButtonText { get; set; } = "Save";
+    [Parameter] public EventCallback OnValidSubmit { get; set; }
+}

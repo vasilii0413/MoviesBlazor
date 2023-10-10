@@ -1,0 +1,14 @@
+E:\Job\Movies\Movies.EntityFramework\bin\Debug\net7.0\Movies.EntityFramework.deps.json
+E:\Job\Movies\Movies.EntityFramework\bin\Debug\net7.0\Movies.EntityFramework.dll
+E:\Job\Movies\Movies.EntityFramework\bin\Debug\net7.0\Movies.EntityFramework.pdb
+E:\Job\Movies\Movies.EntityFramework\obj\Debug\net7.0\Movies.EntityFramework.GeneratedMSBuildEditorConfig.editorconfig
+E:\Job\Movies\Movies.EntityFramework\obj\Debug\net7.0\Movies.EntityFramework.AssemblyInfoInputs.cache
+E:\Job\Movies\Movies.EntityFramework\obj\Debug\net7.0\Movies.EntityFramework.AssemblyInfo.cs
+E:\Job\Movies\Movies.EntityFramework\obj\Debug\net7.0\Movies.EntityFramework.csproj.CoreCompileInputs.cache
+E:\Job\Movies\Movies.EntityFramework\obj\Debug\net7.0\Movies.EntityFramework.dll
+E:\Job\Movies\Movies.EntityFramework\obj\Debug\net7.0\refint\Movies.EntityFramework.dll
+E:\Job\Movies\Movies.EntityFramework\obj\Debug\net7.0\Movies.EntityFramework.pdb
+E:\Job\Movies\Movies.EntityFramework\obj\Debug\net7.0\ref\Movies.EntityFramework.dll
+E:\Job\Movies\Movies.EntityFramework\bin\Debug\net7.0\Movies.EntityFramework.runtimeconfig.json
+E:\Job\Movies\Movies.EntityFramework\obj\Debug\net7.0\Movies.EntityFramework.csproj.AssemblyReference.cache
+E:\Job\Movies\Movies.EntityFramework\obj\Debug\net7.0\Movies.EntityFramework.genruntimeconfig.cache

@@ -1,0 +1,52 @@
+﻿@page "/actors"
+@inject Movies.EntityFramework.MoviesDbContext.MoviesDBContext context;
+@using Movies.EntityFramework.Models;
+<h3><b>Actors</b></h3>
+<div class="form-group">
+    <a class="btn btn-primary" href="actor/create"><i class="oi oi-plus"></i> Add New</a>
+</div>
+<br>
+@if (actors == null)
+{
+    <text>Loading...</text>
+}
+else if (actors.Count== 0)
+{
+    <text>No Records Found.</text>
+}
+else
+{
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                @* <th>Id</th> *@
+                <th>Name</th>
+                <th>Birthday</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (ActorModel act in actors)
+            {
+                <tr>
+                    @* <td>@act.ActorId</td> *@
+                    <td>@act.Name</td>
+                    <td>@act.DateOfBirth.ToShortDateString()</td>
+                    <td>
+                        <a class="btn btn-success" href="actor/edit/@act.ActorId">Edit</a>
+                        <a class="btn btn-danger" href="actor/delete/@act.ActorId">Delete</a>
+                    </td>
+                    
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+@code {
+    List<ActorModel> actors = new List<ActorModel>();
+    protected override void OnInitialized()
+    {
+        actors = context.Actors.ToList();
+    }
+
+}
